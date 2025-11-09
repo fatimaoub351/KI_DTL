@@ -250,12 +250,19 @@ ehlerrate (10-fold cross-validation):
 === Confusion Matrix ===
 
   a  b  c  d  e  f  g   <-- classified as
+  
  41  0  0  0  0  0  0 |  a = mammal
+ 
   0 13  0  0  0  0  0 |  b = fish
+  
   0  0 20  0  0  0  0 |  c = bird
+  
   0  0  0  8  2  0  0 |  d = shellfish
+  
   0  0  0  3  5  0  0 |  e = insect
+  
   0  0  0  0  0  3  1 |  f = amphibian
+  
   0  1  0  0  1  0  3 |  g = reptile
 
 Meiste Klassen sehr gut vorhergesagt (mammal, fish, bird perfekt).
@@ -298,25 +305,43 @@ Muss ggf. in nominale Werte umgewandelt werden
 @relation zoo
 
 @attribute hair {0,1}
+
 @attribute feathers {0,1}
+
 @attribute eggs {0,1}
+
 @attribute milk {0,1}
+
 @attribute airborne {0,1}
+
 @attribute aquatic {0,1}
+
 @attribute predator {0,1}
+
 @attribute domestic {0,1}
+
 @attribute catsize {0,1}
+
 @attribute type {1,2,3,4,5,6,7}
 
 @data
+
 1,0,0,1,0,0,1,0,1,1
+
 1,0,0,1,0,0,1,0,0,1
+
 0,1,1,0,1,0,0,0,0,3
+
 0,0,1,0,0,1,0,0,0,4
+
 0,1,0,0,1,0,0,1,0,3
+
 1,0,0,1,0,0,1,1,1,1
+
 0,0,1,0,0,0,0,0,0,4
+
 0,0,0,1,0,1,0,1,1,2
+
 1,0,0,1,0,0,0,0,1,1
 ...
 
@@ -325,32 +350,66 @@ Muss ggf. in nominale Werte umgewandelt werden
 @relation restaurant
 
 @attribute alternate {yes,no}
+
 @attribute bar {yes,no}
+
 @attribute fri_sat {0,1}        % 0=Nein, 1=Ja
+
 @attribute hungry {yes,no}
+
 @attribute patrons {none,some,full}
+
 @attribute price {low,medium,high}
+
 @attribute raining {yes,no}
+
 @attribute reservation {yes,no}
+
 @attribute type {french,italian,thai,burger}
+
 @attribute wait_time {short,medium,long,very_long}
+
 @attribute wait {yes,no}
 
 @data
+
 yes,no,1,yes,some,high,no,yes,french,short,yes
+
 yes,no,0,yes,full,low,no,no,thai,medium,no
+
 no,yes,0,no,some,low,no,no,burger,short,yes
+
 yes,no,1,yes,full,low,no,no,thai,medium,yes
+
 yes,no,0,yes,full,high,no,yes,french,very_long,no
+
 no,yes,0,yes,some,medium,yes,yes,italian,short,yes
+
 no,yes,0,no,none,low,yes,no,burger,short,no
+
 no,no,1,yes,some,medium,yes,yes,thai,short,yes
+
 no,yes,0,no,full,low,yes,no,burger,very_long,no
+
 yes,yes,1,yes,full,high,no,yes,italian,medium,no
+
 no,no,0,no,none,low,no,no,thai,short,no
+
 yes,yes,1,yes,full,low,no,no,burger,medium,yes
 
+ID3 benötigt nominale Attribute → ARFF notwendig
 
+J48 kann CSV und ARFF verarbeiten
+
+ID3 benötigt nominale Attribute → ARFF notwendig
+
+J48 kann CSV und ARFF verarbeiten
+
+Für einfache Datensätze (Restaurant) liefern beide Algorithmen identische Ergebnisse
+
+Für komplexe Datensätze (Zoo) ist J48 durch Pruning kompakter, ID3 etwas größer, aber beide klassifizieren zuverlässig
+
+Confusion Matrices zeigen, dass Fehler hauptsächlich bei kleinen Klassen auftreten
 
 
 
