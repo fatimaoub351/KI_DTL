@@ -35,7 +35,7 @@ Beispiele:
 
 -> Autonome Fahrzeuge: Nutzen Bilderkennung, Sensorfusion und Entscheidungsalgorithmen.
 
------------------------------------Brauchen wir wirklich Intelligenz in Systemen? Reicht auch schwache KI, d.h. reichen intelligent wirkende Systeme?-----------------
+-----------------------------------Brauchen wir wirklich Intelligenz in Systemen? Reicht auch schwache KI, d.h. reichen intelligent wirkende Systeme?
 
 Für die Lösung der meisten gegenwärtigen Herausforderungen benötigen wir keine allgemeine menschliche Intelligenz in Maschinen, sondern spezialisierte, intelligent wirkende Systeme (Schwache KI), die die Aufgaben effizient und zuverlässig erfüllen, für die sie entwickelt wurden.
 
@@ -190,6 +190,7 @@ Bachlor -> O
 Abitur -> M
 
 # DTL.02: Pruning
+
 ---------------------------------------------------Restaurant-Datensatz------------------------------------------------------------------------------
 
 Baumstruktur
@@ -270,7 +271,9 @@ Kleinere Fehler bei shellfish, insect, amphibian und reptile.
 
 Der Baum nutzt mehrere Attribute, um Tiere korrekt zu klassifizieren.
 
------------------------------------------------
+# DTL.03: Machine Learning mit Weka
+
+----------------------------------------------- Unterschiede zwischen “nominal”, “ordinal” (bzw. “numeric”) und “string-----------------------------------------
 
 2. Attributtypen
 
@@ -300,6 +303,7 @@ ID3 kann string nicht verarbeiten
 
 Muss ggf. in nominale Werte umgewandelt werden
 
+-----------------------------------------------ARFF-Format-------------------------------------------------
 
 @relation zoo
 
@@ -395,6 +399,8 @@ yes,yes,1,yes,full,high,no,yes,italian,medium,no
 no,no,0,no,none,low,no,no,thai,short,no
 
 yes,yes,1,yes,full,low,no,no,burger,medium,yes
+
+---------------------------------------------------Training mit ID3 und J48-------------------------------------------------------------
 
 ID3 benötigt nominale Attribute → ARFF notwendig
 
