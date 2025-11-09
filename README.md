@@ -189,7 +189,10 @@ Bachlor -> O
 
 Abitur -> M
 
-# DTL.02: Pruning
+# DTL.03: Machine Learning mit Weka
+
+
+Training mit J48
 
 ---------------------------------------------------Restaurant-Datensatz------------------------------------------------------------------------------
 
@@ -271,7 +274,7 @@ Kleinere Fehler bei shellfish, insect, amphibian und reptile.
 
 Der Baum nutzt mehrere Attribute, um Tiere korrekt zu klassifizieren.
 
-# DTL.03: Machine Learning mit Weka
+
 
 ----------------------------------------------- Unterschiede zwischen “nominal”, “ordinal” (bzw. “numeric”) und “string-----------------------------------------
 
